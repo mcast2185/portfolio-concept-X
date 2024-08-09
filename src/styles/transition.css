@@ -1,6 +1,8 @@
 .loader {
   width: 100vw;
   height: 100vh;
+  background: #fff;
+  position: absolute;
 }
 
 .loader-clip {
@@ -22,7 +24,6 @@
   bottom: 0;
   clip-path: inset(0 0 -100% 0);
   background: #000;
-  transition: ;
 
 }
 

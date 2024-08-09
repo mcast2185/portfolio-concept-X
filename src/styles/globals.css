@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @import "../styles/menu.css";
+@import "../styles/scrollAnimation.css";
 @import "../styles/transition.css";
 @import "../styles/transition.module.css";
 

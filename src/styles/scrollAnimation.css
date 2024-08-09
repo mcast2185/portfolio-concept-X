@@ -1,0 +1,22 @@
+.sa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+} 
+
+.sa-h1 {
+  text-transform: uppercase;
+  font-size: 200px;
+  font: 400;
+  letter-spacing: -4px;  
+
+}
+
+
+section.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../public/images/photography/three.jpg) no-repeat;
+  background-size: cover;
+}
