@@ -13,6 +13,7 @@ import Header from '../../components/sectionalComponents/Header';
 import NavButtons from '../../components/animationComponents/NavButtons';
 import PageTracker from '../../components/animationComponents/PageTracker';
 import ScrollComponent from '../../components/animationComponents/ScrollComponent';
+import Transition from '@/pages/transition';
 
 
 
@@ -22,27 +23,22 @@ export default function Index({session}: SessionProviderProps) {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="overflow-x-hidden">
       <div className='App'>
         <SessionProvider session={session}>
 
           <Provider store={store}>
+               
+            {/* <Transition/> */}
             <Header />
             <ScrollComponent>
-              {/* 
-
-              grab the element from the source page and adjust the code to 
-              cohesively work with our components.
-
-              <PageTracker sections={SECTIONS} />
-              <NavButtons sections={SECTIONS} /> 
-              */}
               {pageComponents.map((page, index) => (
                 <div
-                  key={index}
-                  id={`section-${index}`}
-                  className="section min-h-screen flex items-center justify-center">
-                    
+                key={index}
+                id={`section-${index}`}
+                className="section min-h-screen flex items-center justify-center">
+                  {/* <NavButtons sections={SECTIONS}/> */}
+                  <PageTracker sections={SECTIONS}/>
                   {page}
                 </div>
               ))}

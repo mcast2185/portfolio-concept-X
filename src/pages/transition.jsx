@@ -52,35 +52,46 @@ const Transition = () => {
       ease: "power4.inOut",
     });
 
-    gsap.to(".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span, .marquee p", 1, {
-      delay: 6,
+    gsap.to(".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span, .marquee h3", 1, {
+      delay: 6.5,
       opacity: 0,
-      zIndex: -10,
+      zIndex: -100,
       ease: "power2.inOut",
     });
 
-    gsap.to(".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span, .marquee p", 1, {
-      delay: 6.5,
-      // opacity: 0,
-      zIndex: -10,
+    gsap.to(".main-header-element", 1, {
+      delay: 6.75,
+      opacity: 0,
+      zIndex: -100,
       ease: "power2.inOut",
     });
 
     gsap.to(".loader", 3.75, {
       delay: 7.5,
-      background: "#0f0f10",
+      background: "transparent",
       ease: "power2.inOut",
+      zIndex: -100
     });
 
-    gsap.to(".loader", 1.5, {
-      delay: 8.25,
+    gsap.to(".animate-on-load", 1.5, {
+      delay: 9,
+      position: "absolute",
+      left: "-200vw",
       opacity: 0,
-      zIndex: -10,
+      scale: 0,
+      zIndex: -100,
+      display: "hidden",
       ease: "power2.inOut",
     });
+    // gsap.to(".home", 1.5, {
+    //   delay: 8.25,
+    //   zIndex: 100,
+    //   display: "flex",
+    //   position: "absolute",
+    // });
   };
 
-
+  useGSAP(() => pageAnimation())
 
 
   useEffect(() => {
@@ -91,6 +102,7 @@ const Transition = () => {
       // Set flag to indicate the homepage has been loaded once
       localStorage.setItem('isFirstLoad', 'true');
       setIsFirstLoad(true);
+
     }
 
     if (isFirstLoad === null) {
@@ -98,27 +110,15 @@ const Transition = () => {
       gsap.fromTo('.animate-on-load', { opacity: 0 }, { opacity: 1, duration: 2, zIndex: -50 });
     }
   }, [setIsFirstLoad]);
-
-
-  useGSAP(() => {
-
-    setIsLoaded(true);
-    console.log("#2", isLoaded);
-    pageAnimation();
-    
-    if (isLoaded === true) {
-      isLoaded
-    }
-  }, [pageAnimation]);
+  
 
   // isLoaded === false && setIsLoaded(true);
 
-  console.log(isLoaded)
   
   return (
     <div className='page-transition-wrapper '>
      
-      <div className=".animate-on-load">
+      <div className=".animate-on-load overflow-hidden">
         <div className="loader">
           <div className="loader-clip clip-top">
             <div className="marquee">
@@ -204,9 +204,10 @@ const Transition = () => {
           </div>
         </div>
       </div>
-      <div className=''>
-        {!isLoaded && <Home props={isLoaded} />}
-      </div>
+      
+      {/* <div className='home hidden h-screen w-screen'>
+        {children}
+      </div> */}
     </div>
   );
 };

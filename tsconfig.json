@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/animationComponents/SpaceBackground.jsx", "src/components/animationComponents/ScrollComponent.jsx", "src/pages/transition.tsx", "src/components/sectionalComponents/ImgScrollAnimation.jsx", "src/components/styledComponents/Button.jsx"],
   "exclude": ["node_modules"]
 }

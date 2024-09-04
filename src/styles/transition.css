@@ -3,6 +3,7 @@
   height: 100vh;
   background: #fff;
   position: absolute;
+z-index: 10000;
 }
 
 .loader-clip {

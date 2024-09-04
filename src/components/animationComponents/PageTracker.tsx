@@ -22,7 +22,7 @@ const PageTracker: React.FC<PageTrackerProps> = ({ sections }) => {
   }, []);
 
   return (
-    <div className="fixed top-4 left-4">
+    <div className="fixed bottom-4 flex justify-center">
       <span className="text-[#d0b20b]">
         {sections[currentIndex]} - {String(currentIndex + 1).padStart(2, '0')}
       </span>

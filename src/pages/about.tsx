@@ -1,12 +1,22 @@
-import React from 'react';
-import Transition from '@/transition';
+'use client';
+
+
+import React, { useRef } from 'react';
+import ImageRevealer from '@/components/sectionalComponents/ImageRevealer';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
 
 const About = () => {
+  gsap.registerPlugin(useGSAP);
+  
   return (
     <div>
-      <h1 className='text-6xl text-green-600'>
-        About
-      </h1>
+      <div className='bg-black w-screen h-[250vh]'>
+        <div className='spacer h-[100vh] w-full' />
+
+        <div className='spacer h-[10vh] py-24 w-full' />
+      </div>
     </div>
   )
 }

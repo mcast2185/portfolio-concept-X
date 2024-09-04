@@ -1,5 +1,5 @@
 import React from 'react'
-import Transition from '@/transition';
+
 
 const Contact = () => {
   return (

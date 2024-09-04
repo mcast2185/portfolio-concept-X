@@ -12,6 +12,10 @@
   }
 }
 
+.navbar {
+  background: transparent;
+}
+
 .menuBar {
   position: fixed;
   top: 0;
