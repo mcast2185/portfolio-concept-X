@@ -32,7 +32,7 @@ const Button = ({ toggleModal, serviceName }) => {
 
     gsap.to(".button-text", {
       color: "#000",
-      duration: 0.5,
+      duration: 0.35,
     });
 
   });
@@ -40,11 +40,11 @@ const Button = ({ toggleModal, serviceName }) => {
   const handleMouseLeave = contextSafe(() => {
     gsap.to(divRef.current, {
       scale: 0,
-      duration: 0.5,
+      duration: 0.35,
     });
 
-    gsap.to(buttonRef.current, {
-      color: "rgb(55,65,81,.9)",
+    gsap.to(".button-text", {
+      color: "#e2e8f0",
       duration: 0.5,
     });
   });
@@ -63,7 +63,7 @@ const Button = ({ toggleModal, serviceName }) => {
       id="button"
       onClick={toggleModal}
       ref={buttonRef}
-      className="relative px-5 py-2 w-[10vw] border border-gray-200
+      className="relative px-5 py-2 w-[10vw] h-[5vh] border border-gray-200
       rounded-3xl text-slate-200 font-light overflow-hidden hover:text-[#000]  bg-transparent"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

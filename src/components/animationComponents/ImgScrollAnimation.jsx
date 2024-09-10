@@ -4,13 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 
 
-import IMG3 from "../../../public/images/photography/twenty.jpg"
-import IMG1 from "../../../public/images/photography/seven.jpg"
-import IMG2 from "../../../public/images/photography/three.jpg"
-import IMG4 from "../../../public/images/photography/twenty-one.jpg"
-import IMG5 from "../../../public/images/photography/six.jpg"
-import IMG6 from "../../../public/images/photography/eight.jpg"
-
+import IMG5 from "../../../public/images/photography/six.jpg";
+import IMG1 from "../../../public/images/photography/seven.jpg";
+import IMG2 from "../../../public/images/photography/three.jpg";
+import IMG6 from "../../../public/images/photography/eight.jpg";
+import IMG3 from "../../../public/images/photography/twenty.jpg";
+import IMG4 from "../../../public/images/photography/twenty-one.jpg";
 
 
 const ImgScrollAnimation = () => {

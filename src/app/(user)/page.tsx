@@ -10,7 +10,7 @@ import About from '@/pages/about';
 import Gallery from '@/pages/gallery';
 import Contact from '@/pages/contact';
 import Header from '../../components/sectionalComponents/Header';
-import NavButtons from '../../components/animationComponents/NavButtons';
+import NavButtons from '../../components/styledComponents/NavButtons';
 import PageTracker from '../../components/animationComponents/PageTracker';
 import ScrollComponent from '../../components/animationComponents/ScrollComponent';
 import Transition from '@/pages/transition';

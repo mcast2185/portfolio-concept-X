@@ -83,6 +83,7 @@ const Transition = () => {
       display: "hidden",
       ease: "power2.inOut",
     });
+
     // gsap.to(".home", 1.5, {
     //   delay: 8.25,
     //   zIndex: 100,
@@ -91,7 +92,7 @@ const Transition = () => {
     // });
   };
 
-  useGSAP(() => pageAnimation())
+  useGSAP(() => pageAnimation());
 
 
   useEffect(() => {

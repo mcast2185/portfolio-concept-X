@@ -2,7 +2,6 @@
 
 
 import React, { useRef } from 'react';
-import ImageRevealer from '@/components/sectionalComponents/ImageRevealer';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 

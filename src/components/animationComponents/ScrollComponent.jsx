@@ -12,7 +12,7 @@ const ScrollComponent = ({children}) => {
   
   useGSAP(() => {
     const lenis = new Lenis({
-      duration: 2,
+      duration: 3,
       easing: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
       orientation: 'vertical', 
       gestureOrientation: 'vertical',

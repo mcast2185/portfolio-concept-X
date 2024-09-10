@@ -69,20 +69,22 @@ const PortfolioImageRevealer = () => {
     });
 
 
-    gsap.utils.toArray(".Portfolio-image-container.Portfolio-image-left .Portfolio-image-revealer").forEach((img) => {
+    gsap.utils.toArray(".Portfolio-image-container-two.Portfolio-image-left-two #Portfolio-image-row-2").forEach((img) => {
       gsap.to(img, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         scrollTrigger: {
           trigger: img,
           start: "top 75%",
           end: "bottom 70%",
-          scrub: true
-        }
+          scrub: true,
+        },
+        delay: 2,
+        duration: 1.25
       });
     });
 
 
-    gsap.utils.toArray(".Portfolio-image-container.Portfolio-image-left .Portfolio-image-p-tag").forEach((text) => {
+    gsap.utils.toArray(".Portfolio-image-container-two.Portfolio-image-left-two .Portfolio-image-p-tag-two").forEach((text) => {
       gsap.from(text, {
         opacity: 0,
         y: 20,
@@ -134,13 +136,40 @@ const PortfolioImageRevealer = () => {
           </div>
           <div className="Portfolio-image-col"></div>
         </div>
-        <div className="Portfolio-image-row" id="Portfolio-image-row-2">
+        <div className="Portfolio-image-row-two" id="Portfolio-image-row-2">
           <div className="Portfolio-image-col"></div>
           <div className="Portfolio-image-col-two">
-            <Button>Hire me</Button>
+            <div className="Portfolio-image-container-two Portfolio-image-left-two">
+              <div className='w-[11vw] h-[275px] flex items-end'>
+                <Button>Hire me</Button>
+              </div>
             
-            <div className="Portfolio-image-container Portfolio-image-left">
-              <div className='relative h-[3.5vh] w-[11vw] pt-[2px] overflow-hidden flex flex-row gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
+              {/* <div className="Portfolio-image-container Portfolio-image-left"> */}
+              <div className='relative h-[275px] w-[5vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start justify-end sm:justify-center sm:items-start sm:w-[100%]'>
+                <div className='Portfolio-image-p-tag-two'>
+                  <div className='relative h-[3.5vh] w-[4vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
+                    <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
+                      <Image src={LINKEDIN} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
+                    </div>
+                  </div>
+                  <div className='relative h-[3.5vh] w-[4vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
+                    <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
+                      <Image src={TWITTER} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
+                    </div>
+                  </div>
+                  <div className='relative h-[3.5vh] w-[4vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
+                    <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
+                      <Image src={FACEBOOK} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
+                    </div>
+                  </div>
+                  <div className='relative h-[3.5vh] w-[4vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
+                    <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
+                      <Image src={INSTAGRAM} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className='relative h-[3.5vh] w-[11vw] pt-[2px] overflow-hidden flex flex-col gap-[2rem] items-start sm:justify-center sm:items-start sm:w-[100%]'>
                 <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
                   <Image src={LINKEDIN} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
                 </div>
@@ -153,7 +182,7 @@ const PortfolioImageRevealer = () => {
                 <div className='h-[8vh] w-[1.5vw] sm:w-[4.5vw]'>
                   <Image src={INSTAGRAM} alt="" className="h-full w-full flex justify-start items-start ease-in duration-500 transition-all delay-150 hover:translate-y-[-48px] text-[#a7a7a7] hover:text-inherit"/>
                 </div>
-              </div>
+              </div> */}
               {/* <p className='Portfolio-image-p-tag'>Light Beyond Bars</p> */}
             </div>
           </div>

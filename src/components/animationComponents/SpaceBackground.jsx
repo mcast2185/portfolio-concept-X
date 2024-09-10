@@ -33,6 +33,7 @@ const ThreeScene = () => {
         let y = (Math.random() - 0.5) * 18.1;
         let x = (Math.random() - 0.5) * 18.3;
         let z = (Math.random() - 0.5) * 18.1;
+        
         posArray[i] = x, y, z;
       };
 

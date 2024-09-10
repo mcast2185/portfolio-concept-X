@@ -9,12 +9,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 
 import ImageRevealer from '@/components/sectionalComponents/ImageRevealer';
-import ImgScrollAnimation from '@/components/sectionalComponents/ImgScrollAnimation';
+import ImgScrollAnimation from '@/components/animationComponents/ImgScrollAnimation';
 import PortfolioImageRevealer from '../components/sectionalComponents/PortfolioImageRevealer';
+import ParallaxImgAnimation from '@/components/animationComponents/ParallaxImgAnimation';
 
 
 const DynamicBackGround = dynamic(() => import("../components/animationComponents/SpaceBackground"), {
   loading: () => <></>
+
 });
 
 const Home = ({props}: any) => {
@@ -46,13 +48,15 @@ const Home = ({props}: any) => {
           {/* <ImageRevealer/> */}
           <PortfolioImageRevealer/>
         </section>
-        <section className='header-content '>
+        <section className='header-content'>
           <p className="sa-p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos iste!
             Maxime sunt deleniti placeat beatae provident consectetur quos at maiores debitis!
           </p>
         </section>
+
         <ImgScrollAnimation/>
+
         <section className="whitespace bg-gradient-to-b from-black to-transparent"></section>
         <section className="pinned">
           <div className="revealer">
