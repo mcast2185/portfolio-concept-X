@@ -1,5 +1,6 @@
 'use client';
 
+import gsap from 'gsap';
 import {
   signIn, 
   signOut, 
@@ -8,19 +9,21 @@ import {
 } from 'next-auth/react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useGSAP } from '@gsap/react';
 import { useRouter } from 'next/navigation';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Menu from './Menu';
+// import Menu from './Menu';
 
 import LOGO from "../../../public/images/logo/TJLogo.png";
-import { useGSAP } from '@gsap/react';
-import Lenis from '@studio-freight/lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 const Header = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  // useGSAP(() => {
+  //   gsap.to("")
+  // })
 
   const router = useRouter();
   const {data: session, status} = useSession();
@@ -29,7 +32,7 @@ const Header = () => {
 
   return (
     <header className='w-screen absolute top-0'>
-      <div className='navbar fixed flex items-center h-[12.5vh] w-full flex-row gap-2 flex-grow py-2 sm:my-auto'>
+      <div id="navbar-id" className='navbar fixed flex items-center h-[12.5vh] w-full flex-row gap-2 flex-grow py-2 sm:my-auto'>
         <div className='relative h-[11vh] pl-6 w-[45%] flex items-center flex-row justify-start flex-grow sm:flex-grow-0'>
           <Image
             onClick={() => router.push('/')}

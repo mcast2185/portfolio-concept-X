@@ -33,6 +33,28 @@ const ScrollComponent = ({children}) => {
     requestAnimationFrame(raf);
     lenis.on('scroll', ScrollTrigger.update);
 
+
+  // menu trigger
+
+    // ScrollTrigger.create({
+    //   trigger: ".hero",
+    //   start: "top 85%",
+    //   end: "bottom top",
+    //   pin: true,
+    //   pinSpacing: false,
+    //   onUpdate: () => {
+
+    //     gsap.to("#navbar-id", {
+    //       // here we will animate the menu into disappearing or appearing upon scroll.
+    //       // we need to establish how we want it to look like and what space it will be occupying
+    //       // 
+
+    //     })
+    //   }
+    // });
+
+  //  
+
   
     ScrollTrigger.create({
       trigger: ".pinned",
@@ -103,9 +125,9 @@ const ScrollComponent = ({children}) => {
       onUpdate: (self) => {
         const x = 800 * self.progress;
         gsap.to(".header-images", {
-          duration: 3.5, 
+          duration: 3.75, 
           x: `-${x}px`, 
-          ease: (t) => Math.min(1, 1.001 - 2 ** (-12 * t)),
+          ease: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
         });
       }
     });

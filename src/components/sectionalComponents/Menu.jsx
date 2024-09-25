@@ -2,8 +2,8 @@
 
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
-import { useRouter } from 'next/navigation';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
 import React, { useRef, useState } from 'react';
 import { ShoppingCart, ArrowUpRight, Home } from 'lucide-react';
 import { signIn, signOut, useSession, getSession } from 'next-auth/react';

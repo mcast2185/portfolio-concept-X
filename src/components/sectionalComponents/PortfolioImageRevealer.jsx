@@ -5,14 +5,16 @@ import React from 'react';
 import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import Button from '../styledComponents/Button';
 import TypeWriterWrapper from '../styledComponents/TypeWriterWrapper';
 
 import IMG from "../../../public/images/headshot/ProImgTj.png";
+import IMG2 from "../../../public/images/headshot/ProImgTj2.png";
 import TWITTER from "../../../public/images/social_media/twitter.png";
 import LINKEDIN from "../../../public/images/social_media/linkedin.png";
 import FACEBOOK from "../../../public/images/social_media/facebook.png";
 import INSTAGRAM from "../../../public/images/social_media/instagram.png";
-import Button from '../styledComponents/Button';
 
 
 
@@ -110,8 +112,9 @@ const PortfolioImageRevealer = () => {
     });
   });
 
+
   return (
-    <div className='font-inter'>
+    <div className='font-inter px-[10%]'>
     {/* <div className='font-DarkerGrotesque'> */}
       <div className="Portfolio-image-reveal-container">
         <div className="Portfolio-image-row" id="Portfolio-image-row-1">
@@ -119,18 +122,21 @@ const PortfolioImageRevealer = () => {
             <div className="Portfolio-image-container Portfolio-image-right">
               <Image 
                 src={IMG} 
-                height={650} 
-                width={300} 
+                height={150} 
+                width={700} 
                 alt='photography by anomar' 
                 className='Portfolio-image-revealer'/>
               <div className='Portfolio-image-p-tag sm:justify-center sm:items-center sm:w-[100%]'>
-                <h2 className='text-3xl italic font-extralight uppercase'>Hello,</h2>
-                <div className='flex flex-row w-full h-[10vh]'>
-                
-                <p className='flex flex-col'>
-                  <span>My Name Is <span className='italic decoration-inherit underline underline-offset-4'>TeeJ</span>  And I Work As A </span><span className='italic font-extralight'><TypeWriterWrapper words={['Photographer', 'Designer', 'Producer', 'Content Creator']} /></span>
-                </p>
+                {/* test wrapping the entire p tag */}
+                <div className='flex flex-col w-full h-full'>
+                  <h2 className='text-3xl italic font-extralight uppercase'>Hello,</h2>
+                  <div className='flex flex-row w-full h-[10vh]'>
+                    <p className='flex flex-col z-[10]'>
+                      <span>My Name Is <span className='italic decoration-inherit underline underline-offset-4'>TeeJ</span>  And I Work As A </span><span className='italic font-extralight'><TypeWriterWrapper words={['Photographer', 'Designer', 'Producer', 'Content Creator']} /></span>
+                    </p>
+                  </div>
                 </div>
+                {/* wrapper end */}
               </div>
             </div>
           </div>
@@ -140,8 +146,18 @@ const PortfolioImageRevealer = () => {
           <div className="Portfolio-image-col"></div>
           <div className="Portfolio-image-col-two">
             <div className="Portfolio-image-container-two Portfolio-image-left-two">
-              <div className='w-[11vw] h-[275px] flex items-end'>
-                <Button>Hire me</Button>
+              <div className='w-[80vw] h-[275px] flex  justify-center items-center relative pr-2'>
+                <div className='w-[80vw] h-[400px] flex justify-end items-end flex-col relative'>
+                  <div className='w-[11vw] pb-[5px] flex justify-end items-end'>
+                    <Button>Hire me</Button>
+                  </div>
+                  <div className='h-[1px] w-full border-b border-slate-200 mb-[25px]'></div>
+                  <div>
+                    <h3 className="text-slate-200 text-4xl">
+                      [aes·thet·ic]
+                    </h3>
+                  </div>
+                </div>
               </div>
             
               {/* <div className="Portfolio-image-container Portfolio-image-left"> */}

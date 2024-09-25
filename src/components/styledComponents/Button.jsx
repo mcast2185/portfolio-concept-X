@@ -44,7 +44,7 @@ const Button = ({ toggleModal, serviceName }) => {
     });
 
     gsap.to(".button-text", {
-      color: "#e2e8f0",
+      color: "#d0b20b",
       duration: 0.5,
     });
   });
@@ -63,8 +63,8 @@ const Button = ({ toggleModal, serviceName }) => {
       id="button"
       onClick={toggleModal}
       ref={buttonRef}
-      className="relative px-5 py-2 w-[10vw] h-[5vh] border border-gray-200
-      rounded-3xl text-slate-200 font-light overflow-hidden hover:text-[#000]  bg-transparent"
+      className="relative px-5 py-2 w-[10vw] h-[5vh] border border-gray-200 hover:scale-[.95] hover:duration-700 
+      hover:ease-out rounded-3xl text-[#d0b20b] font-light overflow-hidden hover:text-[#000]  bg-transparent"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onMouseMove={(e) => { handleMouseMove(e) }}>
@@ -72,7 +72,7 @@ const Button = ({ toggleModal, serviceName }) => {
         left-0 top-0 wrapperElement pointer-events-none rounded-[50%]">
       </div>
       <span className="z-10 font-Inter flex flex-row justify-between py-auto px-2 text-xl w-full">
-        <p className="button-text w-full flex justify-center items-center">Hire Me!</p>
+        <p className="button-text text-[#d0b20b] w-full flex justify-center items-center">Hire Me!</p>
       </span>
     </button>
   );

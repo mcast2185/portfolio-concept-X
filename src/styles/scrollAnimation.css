@@ -5,12 +5,71 @@
 
 } 
 
-.sa-h1 {
+#h-1 {
   text-transform: uppercase;
-  font-size: 200px;
-  font: 400;
-  letter-spacing: -4px;  
+  font-size: 165px;
+  /* font: 700; */
+  letter-spacing: 15px;  
 
+}
+
+#h-2 {
+  text-transform: uppercase;
+  font-size: 165px;
+  /* font: 700; */
+  letter-spacing: -10px;
+  padding-right: 1.9vw;  
+
+}
+
+
+#h-3 {
+transform: translate(1px) rotate(180deg) skew(360deg, 0deg);
+rotate: none;
+scale: none;
+transform: translate(1px, 0px);
+opacity: 1;
+visibility: inherit;
+writing-mode: vertical-rl;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: #fff;
+font-size: .8rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: .3rem;
+line-height: 2rem;
+margin: 4rem 0 0;
+opacity: 0;
+position: relative;
+text-transform: uppercase;
+word-break: break-word;
+z-index: 1;
+}
+
+
+#h-4 {
+transform: translate(1px) rotate(180deg) skew(360deg, 0deg);
+rotate: none;
+scale: none;
+transform: translate(1px, 0px);
+opacity: 1;
+visibility: inherit;
+writing-mode: vertical-lr;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: #fff;
+font-size: .8rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: .3rem;
+line-height: 2rem;
+margin: 4rem 0 0;
+opacity: 0;
+position: relative;
+text-transform: uppercase;
+word-break: break-word;
+z-index: 1;
 }
 
 
@@ -29,6 +88,11 @@ section.hero {
   
 }
 
+section.info .header-rows {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
 .hero h1 {
   
   font-weight: lighter;
@@ -38,7 +102,7 @@ section.hero {
 section.info {
   margin-top: 100vh;
   width: 100vw;
-  height: 150vh;
+  height: 175vh;
   background-color: #000;
   z-index: 100;
   /* position: absolute; */
@@ -70,9 +134,9 @@ section.info {
 .header-content {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #000;
   color: #fff;
@@ -84,9 +148,21 @@ section.info {
   justify-content: flex-start;
   width: 100%;
   padding: 1em;
+  padding-left: 2.5em;
+  padding-right: 40%;
+  font-size: 32px;
+  font-weight: 400;
+  font: italic;
+}
+
+.header-content .sa-h1 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1em;
   padding-left: 1.6em;
-  font-size: 42px;
-  font-weight: lighter;
+  font-size: 32px;
+  /* font-weight: lighter; */
 }
 
 .header-images {

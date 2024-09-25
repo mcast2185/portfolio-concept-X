@@ -1,19 +1,19 @@
 "use client";
 
+import React from 'react';
 import { Provider } from 'react-redux';
-import React, { useEffect, useState } from 'react';
 import { SessionProvider, SessionProviderProps } from 'next-auth/react';
 
 import Home from '@/pages/home';
 import { store } from '../store';
 import About from '@/pages/about';
-import Gallery from '@/pages/gallery';
 import Contact from '@/pages/contact';
+import Gallery from '@/pages/gallery';
+import Transition from '@/pages/transition';
 import Header from '../../components/sectionalComponents/Header';
 import NavButtons from '../../components/styledComponents/NavButtons';
 import PageTracker from '../../components/animationComponents/PageTracker';
 import ScrollComponent from '../../components/animationComponents/ScrollComponent';
-import Transition from '@/pages/transition';
 
 
 
@@ -29,7 +29,7 @@ export default function Index({session}: SessionProviderProps) {
 
           <Provider store={store}>
                
-            {/* <Transition/> */}
+            <Transition/>
             <Header />
             <ScrollComponent>
               {pageComponents.map((page, index) => (

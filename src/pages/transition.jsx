@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import React, { useEffect, useState } from 'react';
 
-import Home from './home';
 
 // import Header from '../components/sectionalComponents/Header';
 
@@ -205,10 +204,6 @@ const Transition = () => {
           </div>
         </div>
       </div>
-      
-      {/* <div className='home hidden h-screen w-screen'>
-        {children}
-      </div> */}
     </div>
   );
 };
