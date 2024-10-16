@@ -1,6 +1,7 @@
 'use client';
 
 import { gsap } from "gsap";
+// import { Image } from 'next/image';
 import { useGSAP } from '@gsap/react';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
@@ -9,6 +10,9 @@ import { ShoppingCart, ArrowUpRight, Home } from 'lucide-react';
 import { signIn, signOut, useSession, getSession } from 'next-auth/react';
 
 import { selectItems } from '../../slices/basketSlice';
+import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+
+// import LOGO from "../../../public/images/logo/TJLogo.png";
 
 
 
@@ -58,17 +62,25 @@ const Menu = () => {
       delay: -0.75,
     });
 
+    // if (menuIsOpen) {
+    //   tl.current.play();
+    // } else {
+    //   tl.current.reverse();
+    // }
+  }, {scope: ref});
+
+
+    useIsomorphicLayoutEffect(() => {
     if (menuIsOpen) {
       tl.current.play();
     } else {
       tl.current.reverse();
     }
-  }, {scope: ref});
-
+  }, [menuIsOpen]);
 
   
   return (
-    <div ref={ref} className='z-20  md:w-0'>
+    <div ref={ref} className='menu-bar-container z-20 sm:hidden sm:invisible sm:w-0 md:hidden md:invisible md:w-0'>
       <div className="menuBar">
         <div className="relative">
           {/* <div className="menuOpen" >
@@ -78,9 +90,9 @@ const Menu = () => {
           </div> */}
           <div className='absolute top-0 flex justify-center h-[100vh] items-center'>
             <div onClick={toggleMenu} className='menuBurger group/burgerLines cursor-pointer 
-              w-[9vw] h-[85px] overflow-hidden relative flex flex-row items-center transform ease-in'>
+              w-[9vw] h-[50px] overflow-hidden relative flex flex-row justify-center transform ease-in'>
               <div className='w-[190px] flex flex-row relative justify-around '>          
-                <div className='menuBurgerDefault h-[85px] w-[65px] absolute flex justify-evenly flex-col'>
+                <div className='menuBurgerDefault h-[50px] w-[65px] absolute flex justify-evenly flex-col'>
                   <div className='menuBurgerLine num1 delay-1000 transform-none w-[65px] 
                     ease-in-out duration-[850ms] group-hover/burgerLines:border-b-[#5d1da1]'/>
                   <div className='menuBurgerLine num2 delay-1000 transform-none w-[65px] 

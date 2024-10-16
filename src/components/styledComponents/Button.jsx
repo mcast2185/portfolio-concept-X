@@ -27,7 +27,7 @@ const Button = ({ toggleModal, serviceName }) => {
     gsap.set(divRef.current, { opacity: 1 });
     gsap.to(divRef.current, {
       scale: 3.5,
-      duration: 0.5,
+      duration: 0.75,
     });
 
     gsap.to(".button-text", {
@@ -40,12 +40,13 @@ const Button = ({ toggleModal, serviceName }) => {
   const handleMouseLeave = contextSafe(() => {
     gsap.to(divRef.current, {
       scale: 0,
-      duration: 0.35,
+      duration: 0.5,
     });
 
     gsap.to(".button-text", {
       color: "#d0b20b",
-      duration: 0.5,
+      scale: 1,
+      duration: 0.75,
     });
   });
 

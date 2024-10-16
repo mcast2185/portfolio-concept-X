@@ -1,3 +1,29 @@
+#h-1 {
+  text-transform: uppercase;
+  font-size: 165px;
+  /* font: 700; */
+  letter-spacing: 15px;  
+
+}
+
+#h-2 {
+  text-transform: uppercase;
+  font-size: 165px;
+  /* font: 700; */
+  letter-spacing: -10px;
+  padding-right: 1.9vw;  
+
+}
+
+.Portfolio-image-reveal-wrapper {
+  height: 100%;
+  width: 100vw;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: relative;
+}
+
+
 
 .Portfolio-image-p-tag {
   display: flex;
@@ -5,9 +31,12 @@
   height: 8vh;
   width: 25vw;
   text-align: start;
+
   /* text-overflow: wrap; */
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 200;
+  opacity: 0;
+  transform: translateY(8vh);
   /* position: relative; */
   /* font-style: italic; */
   /* text-transform: uppercase; */
@@ -61,7 +90,8 @@
 }
 
 .Portfolio-image-col {
-  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .Portfolio-image-col-two {

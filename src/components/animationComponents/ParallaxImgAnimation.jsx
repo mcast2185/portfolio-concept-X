@@ -124,4 +124,4 @@ const ParallaxImgAnimation = () => {
   );
 };
 
-export default ParallaxImgAnimation
+export default ParallaxImgAnimation;

@@ -1,8 +1,10 @@
 "use client";
 
+import gsap from 'gsap';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { SessionProvider, SessionProviderProps } from 'next-auth/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Home from '@/pages/home';
 import { store } from '../store';
@@ -14,12 +16,42 @@ import Header from '../../components/sectionalComponents/Header';
 import NavButtons from '../../components/styledComponents/NavButtons';
 import PageTracker from '../../components/animationComponents/PageTracker';
 import ScrollComponent from '../../components/animationComponents/ScrollComponent';
+import { useGSAP } from '@gsap/react';
+import Menu from '@/components/sectionalComponents/Menu';
 
 
 
 export default function Index({session}: SessionProviderProps) {
   const SECTIONS = ['Home', 'Gallery', 'About', 'Contact'];
   const pageComponents = [ <Home/>,  <Gallery/>,  <About/>,  <Contact/>]
+
+useGSAP(()=> {
+
+  ScrollTrigger.create({
+    trigger: ".Portfolio-image-p-tag-two",
+    start: "top top",
+    end: "50% top",
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const opacity = 4.5 * progress;
+      gsap.to(".header-container", {
+        opacity: -opacity + 1,
+      });
+    },
+  });
+
+  ScrollTrigger.create({
+    trigger: ".imageScrollAnimation-container",
+    start: "top top",
+    end: "top top",
+    onUpdate: (self) => {
+      const progress = self.progress;
+      gsap.to(".header-container", {
+        z: -progress + 20,
+      });
+    },
+  });
+});
 
 
   return (
@@ -29,8 +61,9 @@ export default function Index({session}: SessionProviderProps) {
 
           <Provider store={store}>
                
-            <Transition/>
+            {/* <Transition/> */}
             <Header />
+            <Menu/>
             <ScrollComponent>
               {pageComponents.map((page, index) => (
                 <div

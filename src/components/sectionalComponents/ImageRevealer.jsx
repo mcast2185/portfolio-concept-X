@@ -79,7 +79,7 @@ const ImageRevealer = () => {
 
     gsap.utils.toArray(".img-container.left .p-tag").forEach((text) => {
       gsap.from(text, {
-        opacity: 0,
+        opacity: 0.25,
         y: 20,
         scrollTrigger: {
           trigger: text,
@@ -91,7 +91,7 @@ const ImageRevealer = () => {
 
     gsap.utils.toArray(".img-container.right .p-tag").forEach((text) => {
       gsap.from(text, {
-        opacity: 0,
+        opacity: 0.25,
         y: 20,
         scrollTrigger: {
           trigger: text,
@@ -147,7 +147,7 @@ const ImageRevealer = () => {
           </div>
         </div>
       </div>
-      <div className="whitespace-img-revealer"></div>
+      {/* <div className="whitespace-img-revealer"></div> */}
     </div>
   );
 };

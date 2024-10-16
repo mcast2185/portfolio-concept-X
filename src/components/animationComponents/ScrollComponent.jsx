@@ -117,17 +117,31 @@ const ScrollComponent = ({children}) => {
     });
     
     ScrollTrigger.create({
-      trigger: ".pinned",
       start: "top top",
       endTrigger: ".whitespace",
       scrub: 1, 
       end: "top 35%",
       onUpdate: (self) => {
-        const x = 800 * self.progress;
+        const x = 125 * self.progress;
         gsap.to(".header-images", {
           duration: 3.75, 
           x: `-${x}px`, 
-          ease: (t) => Math.min(1, 1.001 - 2 ** (-10 * t)),
+          ease: (t) => Math.min(1, 1.001 - 2 ** (-13 * t)),
+        });
+      }
+    });
+
+    ScrollTrigger.create({
+      start: "top top",
+      endTrigger: ".whitespace",
+      scrub: 1, 
+      end: "top 35%",
+      onUpdate: (self) => {
+        const x = 75 * self.progress;
+        gsap.to(".header-images-2", {
+          duration: 3.75, 
+          x: `${ -425 + x}px`, 
+          ease: (t) => Math.min(1, 1.001 - 2 ** (-13 * t)),
         });
       }
     });

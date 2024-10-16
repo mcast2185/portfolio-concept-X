@@ -13,7 +13,7 @@ import { useGSAP } from '@gsap/react';
 import { useRouter } from 'next/navigation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// import Menu from './Menu';
+import Menu from './Menu';
 
 import LOGO from "../../../public/images/logo/TJLogo.png";
 
@@ -31,37 +31,37 @@ const Header = () => {
 
 
   return (
-    <header className='w-screen absolute top-0'>
+    <header className='header-container w-screen absolute top-0 z-[20]'>
       <div id="navbar-id" className='navbar fixed flex items-center h-[12.5vh] w-full flex-row gap-2 flex-grow py-2 sm:my-auto'>
         <div className='relative h-[11vh] pl-6 w-[45%] flex items-center flex-row justify-start flex-grow sm:flex-grow-0'>
-          <Image
+          {/* <Image
             onClick={() => router.push('/')}
             src={LOGO}
             width={120}
             height={40}
             objectFit='contain'
             className='cursor-pointer h-[85%] w-[6vw] sm:w-[12vw]'
-          />
+          /> */}
         </div>
         <div className='text-[#292929] flex items-center space-x-6 mr-6 whitespace-nowrap justify-end w-[60%]'>
 
           <div className='flex flex-row justify-start items-center w-full sm:hidden sm:h-0 sm:w-0'>
-            <Link href="/" aria-details='' className='font-Inter font-[300] tracking-wider text-[17.5px] text-[#fff] mix-blend-difference'>
+            <Link href="/" aria-details='' className='font-Inter font-[200] tracking-wider text-[16px] text-[#fff] mix-blend-difference'>
               <p className='px-7'>Home</p>
             </Link>
-            <Link href="/" aria-details='' className='font-Inter font-[300] tracking-wider text-[17.5px] text-[#fff] mix-blend-difference '>
+            <Link href="/" aria-details='' className='font-Inter font-[200] tracking-wider text-[16px] text-[#fff] mix-blend-difference '>
               <p className='px-7'>About</p>
             </Link>
-            <Link href="/" aria-details='' className='font-Inter font-[300] tracking-wider text-[17.5px] text-[#fff] mix-blend-difference '>
+            <Link href="/" aria-details='' className='font-Inter font-[200] tracking-wider text-[16px] text-[#fff] mix-blend-difference '>
               <p className='px-7'>Gallery</p>
             </Link>
-            <Link href="/" aria-details='' className='font-Inter font-[300] tracking-wider text-[17.5px] text-[#fff] mix-blend-difference '>
+            <Link href="/" aria-details='' className='font-Inter font-[200] tracking-wider text-[16px] text-[#fff] mix-blend-difference '>
               <p className='px-7'>Contact Us</p>
             </Link>
           </div>
 
           <div className='flex justify-end items-center flex-row w-56 sm:hidden sm:h-0 sm:w-0'>
-          
+{/*           
             <div 
               onClick={status === "unauthenticated" ? signIn : signOut} 
               className='link font-Inter font-[300] tracking-wider text-[14px] text-[#fff] mix-blend-difference px-3'>
@@ -75,7 +75,8 @@ const Header = () => {
               className='cursor-pointer link px-3 font-Inter font-[300] tracking-wider text-[14px] text-[#fff] mix-blend-difference'>
               <p>Items</p>
               <p className='font-medium md:text-sm'>& Orders</p>
-            </div>
+            </div> */}
+            {/* <Menu/> */}
           </div>
 
           <div className='sm:flex sm:justify-end sm:items-center sm:flex-row sm:w-56 w-0 h-0 sm:h-full '>

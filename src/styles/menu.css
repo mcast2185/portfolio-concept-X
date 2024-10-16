@@ -94,21 +94,21 @@
 
 
 
-.num3, .num6 {
+/* .num3, .num6 {
   height: 2px;
   width: 70%;
   display: flex;
   animation: menuBurgerEffect;
   animation-duration: 1.2s;
   transition-timing-function: ease;
-  border-bottom: 2px solid #030303;
-}
+  border-bottom: 2px solid #fff;
+} */
 
 
 .num1, .num2, .num3 {
   animation-duration: 1.2s;
   transition-timing-function: ease;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #5d1da1;
 
 }
 
@@ -116,14 +116,14 @@
 .num4, .num5, .num6 {
   animation-duration: 1.2s;
   transition-timing-function: ease;
-  border-bottom: 2px solid #070606;
+  border-bottom: 2px solid #fff;
 }
 
 .num4:hover, .num5:hover, .num6:hover {
   /* animation: menuBurgerEffect; */
   animation-duration: .5s;
   transition-timing-function: ease;
-  border-bottom: 2px solid #5d1da1;
+  border-bottom: 2px solid #fff;
 
 
 }
