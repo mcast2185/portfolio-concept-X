@@ -172,7 +172,7 @@ const PortfolioImageRevealer = () => {
               {/* <div className='w-[80vw] h-[275px] flex  justify-center items-center relative'> */}
                 <div className='w-[80vw] h-[400px] flex justify-end items-end flex-col relative pr-2'>
                   <div className='Portfolio-button w-[11vw] pb-[5px] flex justify-end items-end'>
-                    <Button>Hire me</Button>
+                    <Button text="Hire Me!" border="#e5e7eb" color="#d0b20b">Hire Me!</Button>
                   </div>
                   <div className='h-[1px] w-full border-b border-slate-200 mb-[25px]'></div>
                   <div>

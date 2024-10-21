@@ -61,20 +61,23 @@ useGSAP(()=> {
 
           <Provider store={store}>
                
-            {/* <Transition/> */}
+            <Transition/>
             <Header />
             <Menu/>
             <ScrollComponent>
-              {pageComponents.map((page, index) => (
+              {/* {pageComponents.map((page, index) => (
                 <div
                 key={index}
                 id={`section-${index}`}
                 className="section min-h-screen flex items-center justify-center">
-                  {/* <NavButtons sections={SECTIONS}/> */}
+                  <NavButtons sections={SECTIONS}/>
                   <PageTracker sections={SECTIONS}/>
                   {page}
                 </div>
-              ))}
+              ))} */}
+              <Home />  
+              {/* <Gallery />   */}
+              <Contact />
             </ScrollComponent>
           </Provider>
         </SessionProvider>

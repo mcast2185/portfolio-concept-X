@@ -12,9 +12,7 @@
   }
 }
 
-.navbar {
-  background: transparent;
-}
+
 
 .menuBar {
   position: fixed;
@@ -29,7 +27,7 @@
   z-index: 1;
   /* background: #000; */
   /* border: 1px solid; */
-  border-left: 1px solid #fff;
+  /* border-left: 1px solid #fff; */
 }
 
 /* .menuBar,  */

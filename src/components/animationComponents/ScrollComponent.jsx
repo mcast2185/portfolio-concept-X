@@ -222,7 +222,7 @@ const ScrollComponent = ({children}) => {
       endTrigger: ".whitespace-2",
       end: "bottom top",
       onUpdate: (self) => {
-        const opacity = 1.2 * self.progress;
+        const opacity = 2 * self.progress;
         gsap.to(".top-border-animation", {
           opacity: `${-opacity + 1}`
         })
