@@ -36,13 +36,13 @@ const ImgScrollAnimation = () => {
         </div>
         <div className="header-images-2 scroll-smooth">
           <div className="sa-img-wrapper">
-            <Image src={IMG5} alt="" className="sa-image" priority />
+            <Image src={IMG7} alt="" className="sa-image" priority />
           </div>
           <div className="sa-img-wrapper">
             <Image src={IMG6} alt="" className="sa-image" priority />
           </div>
           <div className="sa-img-wrapper">
-            <Image src={IMG7} alt="" className="sa-image" priority />
+            <Image src={IMG5} alt="" className="sa-image" priority />
           </div>
           <div className="sa-img-wrapper">
             <Image src={IMG8} alt="" className="sa-image" priority />

@@ -55,7 +55,7 @@ useGSAP(()=> {
 
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden" aria-details='ANOMAR homepage'>
       <div className='App'>
         <SessionProvider session={session}>
 

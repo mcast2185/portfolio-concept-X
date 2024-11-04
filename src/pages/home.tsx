@@ -19,6 +19,12 @@ const DynamicBackGround = dynamic(() => import("../components/animationComponent
 
 });
 
+
+// page notes:
+
+// utilizing css doesnt allow our tailwind media detecting css to apply
+// possible media detector change.
+
 const Home = ({props}: any) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -32,19 +38,19 @@ const Home = ({props}: any) => {
       <div className='z-10 '>
         <div className='top-border-animation w-screen h-[20vh] bg-black z-0 translate-y-[-20vh] fixed top-0'></div>
         <section className="hero">
-          <h1 className='uppercase font-normal tracking-[-4px] text-[200px]'>
+          <h1 className='uppercase font-normal tracking-[-4px] text-[200px] sm:text-[100px]'>
             ANOMAR
           </h1>
         </section>
         <section className="info font-inter">
           <div className="header-rows">
             <div className="header-row flex flex-row">
-              <h1 id="h-1" className="sa-h1 font-[700]">inspired</h1>
-              <h3 id="h-3" className="sa-h1 font-Megrim italic">design</h3>
+              <h1 id="h-1" className="sa-h1 font-[700] sm:text-[100px]">inspired</h1>
+              <h3 id="h-3" className="sa-h1 font-Megrim italic sm:text-[16px]">design</h3>
             </div>
             <div className="header-row flex flex-row">
-              <h3 id="h-4" className="sa-h1 font-inter font-[700] tracking-[.25rem] uppercase">design</h3>
-              <h1 id="h-2" className="sa-h1 font-Megrim italic -skew-x-12 font-[300]">perspective</h1>
+              <h3 id="h-4" className="sa-h1 font-inter font-[700] tracking-[.25rem] uppercase sm:text-[16px]">design</h3>
+              <h1 id="h-2" className="sa-h1 font-Megrim italic -skew-x-12 font-[300] sm:text-[100px]">perspective</h1>
             </div>
           </div>
           <PortfolioImageRevealer/>
